@@ -10,12 +10,12 @@ import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
 
-public class App {
+public class JsonReadFile {
 	public static void main(String[] args) {
 
 		try {
 			System.out.println(new File(".").getAbsoluteFile());
-			JsonReader jreader = Json.createReader(new FileReader("cust.info"));
+			JsonReader jreader = Json.createReader(new FileReader("cust_input.info"));
 			JsonObject customerObj = jreader.readObject();
 			Customer customer = new Customer();
 			customer.setCustId(customerObj.getInt("custId"));
@@ -29,10 +29,20 @@ public class App {
 			address.setZipcode(addressObj.getString("zipcode"));
 			customer.setAddress(address);
 			JsonArray phoneArray = customerObj.getJsonArray("phoneNumbers");
-			String[] phones = new String[phoneArray.size()];
+			Phone[] phones = new Phone[phoneArray.size()];
 			int index = 0;
 			for (JsonValue value : phoneArray) {
-				phones[index++] = value.toString();
+				
+				if (value.getValueType().equals(JsonValue.ValueType.OBJECT)) {
+					JsonObject jobj = (JsonObject)value;
+					Phone phone = new Phone();
+					phone.setType(jobj.getString("type"));
+					phone.setPhNumber(jobj.getString("phNumber"));
+					phones[index++] = phone;
+				}
+				
+					
+				
 			}
 			customer.setPhoneNumbers(phones);
 

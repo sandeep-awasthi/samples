@@ -35,7 +35,7 @@ public class Address {
 		builder.append("AddressLine1 " +addressLine1 + "\n");
 		builder.append("AddressLine2 "+addressLine2 + "\n");
 		builder.append("city " +city + "\n");
-		builder.append("Zipcode " +zipcode + "\n");
+		builder.append("Zipcode " +zipcode );
 		return builder.toString();
 	}
 	

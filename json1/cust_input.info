@@ -9,5 +9,5 @@
 		"city":"Example city",
 		"zipcode":"12345"
         },
-    "phoneNumbers":["123-123-1234", "1122334455"]
+    "phoneNumbers":[{"type":"home","phNumber":"123-123-1234"},{"type":"mobile","phNumber":"1122334455"}]
 }
