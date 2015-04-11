@@ -1,0 +1,13 @@
+{
+	"custId":1,
+	"firstName":"Sandeep",
+	"lastName":"Awasthi",
+	"regular":true,
+	"address":{
+		"addressLine1":"AB/10, Example Building",
+		"addressLine2":"Example Street",	
+		"city":"Example city",
+		"zipcode":"12345"
+        },
+    "phoneNumbers":["123-123-1234", "1122334455"]
+}
