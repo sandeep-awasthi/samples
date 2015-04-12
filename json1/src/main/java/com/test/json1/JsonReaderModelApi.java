@@ -1,4 +1,4 @@
-package com.test.jaxb.json1;
+package com.test.json1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
 
-public class JsonReadFile {
+public class JsonReaderModelApi {
 	public static void main(String[] args) {
 
 		try {

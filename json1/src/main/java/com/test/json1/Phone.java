@@ -1,4 +1,4 @@
-package com.test.jaxb.json1;
+package com.test.json1;
 
 public class Phone {
 	private String type;

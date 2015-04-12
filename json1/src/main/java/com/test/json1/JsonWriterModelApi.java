@@ -1,4 +1,4 @@
-package com.test.jaxb.json1;
+package com.test.json1;
 
 import java.io.File;
 import java.io.FileWriter;
